@@ -1,0 +1,11 @@
+# 음성 입력 (app/audio)
+faster-whisper>=1.1
+sounddevice>=0.5
+numpy>=1.26
+
+# NVIDIA GPU 사용 시 (없으면 자동으로 CPU 사용). ctranslate2가 CUDA 12 라이브러리를 요구함
+nvidia-cublas-cu12; sys_platform == "win32" or sys_platform == "linux"
+nvidia-cudnn-cu12>=9,<10; sys_platform == "win32" or sys_platform == "linux"
+
+# 시험
+pytest>=8
