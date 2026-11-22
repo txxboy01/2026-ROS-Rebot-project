@@ -5,7 +5,7 @@
     listener = VoiceListener(on_transcript=..., on_stop=...)
     listener.start()
     ...
-    listener.set_muted(True)   # TTS 재생 중: 명령은 무시, 정지어는 계속 감지
+    listener.set_muted(True)   # 명령은 무시, 정지어는 계속 감지
 """
 from __future__ import annotations
 
@@ -96,7 +96,7 @@ class VoiceListener:
 
     # ---- 제어 ------------------------------------------------------------
     def set_muted(self, muted: bool) -> None:
-        """TTS 재생 중 True. 로봇 자기 목소리를 명령으로 받지 않되 정지어는 계속 듣는다."""
+        """True면 명령은 받지 않되 정지어는 계속 듣는다. 로봇이 동작 중이라 새 명령을 받으면 안 될 때 등."""
         self._muted = muted
 
     def begin_utterance(self) -> None:
