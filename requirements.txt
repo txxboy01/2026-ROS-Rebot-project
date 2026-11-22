@@ -7,5 +7,8 @@ numpy>=1.26
 nvidia-cublas-cu12; sys_platform == "win32" or sys_platform == "linux"
 nvidia-cudnn-cu12>=9,<10; sys_platform == "win32" or sys_platform == "linux"
 
+# 명령 해석 (app/agent)
+anthropic>=2.12
+
 # 시험
 pytest>=8
